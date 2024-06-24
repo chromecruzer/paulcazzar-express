@@ -1,0 +1,16 @@
+{
+  "name": "https-node-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app with HTTPS in Docker",
+  "main": "app.js",
+  "scripts": {
+    "start": " nodemon --inspect app.js",
+    "gen-certs": "node generate-certificates.js",
+    "minify": "terser app.js --output Production/output.min.js --compress --mangle --source-map \"url='output.min.js.map', includeSources=true\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "terser": "^5.31.1"
+  }
+}
